@@ -33,7 +33,7 @@ export default async function Page(props: {
             Tabs,
             img: (props) => (
               <ImageZoom
-                {...(props as any)}
+                {...(props)}
               />
             ),
           }}

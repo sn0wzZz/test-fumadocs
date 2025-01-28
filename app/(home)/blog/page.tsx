@@ -7,15 +7,15 @@ export default function BlogPage() {
   console.log(posts)
   return (
     <main className='container max-sm:px-0 md:py-12'>
-      <h1 className='mb-4 border-b-4 border-fd-foreground pb-2 text-4xl font-bold md:text-5xl'>
+      <h1 className='mb-4  border-fd-foreground pb-2 text-4xl font-bold md:text-5xl'>
         Trigani Blog
       </h1>
-      <div className='border'>
+      <div className=' grid grid-cols-1 gap-4 md:grid-cols-2'>
         {posts.map((post) => (
           <Link
             key={post.url}
             href={post.url}
-            className='flex flex-col bg-fd-card p-4 transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground'
+            className='flex flex-col bg-fd-card p-4 transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground rounded-3xl'
           >
             <p className='font-medium'>{post.data.title}</p>
             <p className='text-sm text-fd-muted-foreground'>
