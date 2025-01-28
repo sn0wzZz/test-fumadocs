@@ -3,11 +3,116 @@ title: Components
 description: Components
 ---
 
+## InlineTOC
+
+import { InlineTOC } from 'fumadocs-ui/components/inline-toc';
+ 
+<InlineTOC items={toc} />
+
 ## Code Block
 
 ```js
 console.log('Hello World');
 ```
+
+## Dynamic Code Block
+
+import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
+ 
+<DynamicCodeBlock
+  lang="ts"
+  code='console.log("This is pre-rendered")'
+ 
+/>
+
+
+## Code Block TS to JS
+
+```tsx ts2js
+import { ReactNode } from 'react';
+ 
+export default function Layout({ children }: { children: ReactNode }) {
+  return <div>{children}</div>;
+}
+```
+
+## Tabs
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+ 
+<Tabs items={['Javascript', 'Rust']}>
+  <Tab value="Javascript">Javascript is weird</Tab>
+  <Tab value="Rust">Rust is fast</Tab>
+</Tabs>
+
+## Steps 
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+ 
+<Steps>
+<Step>
+ 
+### Hello World
+ 
+</Step>
+ 
+<Step>
+ 
+### Goodbye World
+ 
+</Step>
+</Steps>
+
+## Accordion
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+ 
+<Accordions>
+  <Accordion title="My Title">My Content</Accordion>
+</Accordions>
+
+## Banner
+
+import { Banner } from 'fumadocs-ui/components/banner';
+ 
+<Banner id="hello-world" variant='rainbow'>Hello World</Banner>
+
+## Files
+
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+ 
+<Files>
+  <Folder name="app" defaultOpen>
+    <File name="layout.tsx" />
+    <File name="page.tsx" />
+    <File name="global.css" />
+  </Folder>
+  <Folder name="components">
+    <File name="button.tsx" />
+    <File name="tabs.tsx" />
+    <File name="dialog.tsx" />
+  </Folder>
+  <File name="package.json" />
+</Files>
+
+## Zoom Image
+
+<img src="https://fumadocs.vercel.app/_next/static/media/banner.3a91cace.png" alt="Random Image" />
+
+## Type table
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+ 
+<TypeTable
+  type={{
+    percentage: {
+      description:
+        'The percentage of scroll position to display the roll button',
+      type: 'number',
+      default: 0.2,
+    },
+  }}
+/>
 
 ## Cards
 
@@ -15,3 +120,4 @@ console.log('Hello World');
   <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
   <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
 </Cards>
+

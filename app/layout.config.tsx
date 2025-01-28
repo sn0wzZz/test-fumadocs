@@ -1,4 +1,4 @@
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 
 /**
  * Shared layout configurations
@@ -10,7 +10,7 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 export const baseOptions: BaseLayoutProps = {
   nav: {
     // can be JSX too!
-    title: 'My App',
+    title: 'Trigani',
   },
   links: [
     {
@@ -18,5 +18,10 @@ export const baseOptions: BaseLayoutProps = {
       url: '/docs',
       active: 'nested-url',
     },
+    {
+      text: 'Blog',
+      url: '/blog',
+      active: 'nested-url',
+    },
   ],
-};
+}
